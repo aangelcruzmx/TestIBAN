@@ -24,11 +24,12 @@ class CuentaTest {
     void compruebaIban2() {
         assertTrue(cuenta.compruebaIBAN("ES6000491500051234567892"));
     }
-
     @Test
-    void compruebaIban3() {
-        assertTrue(cuenta.compruebaIBAN("ES94020805801101234567891"));
+    void compruebaIban4() {
+        assertFalse(cuenta.compruebaIBAN("ES7600246912501234567891"));
     }
+
+
 
     //generados en automatico
     @Test

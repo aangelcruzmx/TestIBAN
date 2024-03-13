@@ -44,4 +44,12 @@ public class Cuenta {
         java.math.BigInteger numIBAN = new java.math.BigInteger(cadenaIBAN);
         return 98 - numIBAN.mod(new java.math.BigInteger("97")).intValue();
     }
+
+    private void metodoAyuda(){
+        System.out.println("Este metodo es de prueba porque no me esta dejando hacer commits");
+        int x = 20;
+        for (int i = 0; i < 10 ; i++) {
+            x = x * 2;
+        }
+    }
 }
