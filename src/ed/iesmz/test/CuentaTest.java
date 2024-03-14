@@ -59,6 +59,25 @@ class CuentaTest {
     void generaIBAN4() {
         assertNull(cuenta.generaIBAN("2085","2066","62","3456AE9011"));
     }
+    @Test
+    void generaIBAN5() {
+        assertNull(cuenta.generaIBAN("208","2066","62","3456789011"));
+    }
+
+    @Test
+    void generaIBAN6() {
+        assertNull(cuenta.generaIBAN("2080","20A6","62","3456789011"));
+    }
+
+    @Test
+    void generaIBAN7() {
+        assertNull(cuenta.generaIBAN("2080","2086","7","3456789011"));
+    }
+
+    @Test
+    void generaIBAN8() {
+        assertNull(cuenta.generaIBAN("2080","2086","63","34567891"));
+    }
 
 
 
