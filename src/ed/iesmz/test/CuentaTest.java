@@ -45,6 +45,18 @@ class CuentaTest {
     void generaIBAN1() {
         assertEquals("ES7100302053091234567895", cuenta.generaIBAN("0030","2053","09","1234567895"));
     }
+
+    @Test
+    void compruebaIban7_1() {
+        assertTrue(cuenta.compruebaIBAN("ES7100302053091234567895"));//valor esperado en el anterior generaIBAN1
+    }
+    @Test
+    void compruebaIban7_2() {
+        assertTrue(cuenta.compruebaIBAN("ES1700302053091234567895"));//valor GENERADO en el anterior generaIBAN1
+    }
+
+
+
     @Test
     void generaIBAN2() {
         assertEquals("ES1000492352082414205416", cuenta.generaIBAN("0049","2352","08","2414205416"));

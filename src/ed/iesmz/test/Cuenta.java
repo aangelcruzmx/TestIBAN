@@ -25,7 +25,7 @@ public class Cuenta {
         String cadenaIBAN = entidad + oficina + digitoControl + cuenta + valorLetrasIBAN + "00";
         int digitoControlIBAN = calcularDigitoControl(cadenaIBAN);
         String digito = String.format("%02d", digitoControlIBAN); // Asegura que el digito de control sea de dos dígitos
-
+        System.out.println("digito" + digito);
         return letrasIBAN + digito + entidad + oficina + digitoControl + cuenta;
     }
 
@@ -42,7 +42,10 @@ public class Cuenta {
 
     private int calcularDigitoControl(String cadenaIBAN) {
         java.math.BigInteger numIBAN = new java.math.BigInteger(cadenaIBAN);
-        return 98 - numIBAN.mod(new java.math.BigInteger("97")).intValue();
+        System.out.println("depuracion: " + numIBAN); // linnea para imprimir y depurar
+        int digitoControl = 98 - numIBAN.mod(new java.math.BigInteger("97")).intValue();
+        return digitoControl;
+
     }
 
     private void metodoAyuda(){
